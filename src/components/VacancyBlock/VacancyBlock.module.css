@@ -1,0 +1,29 @@
+.title {
+  margin-bottom: 32px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #202020;
+}
+
+.vacancyBlockList {
+  display: grid;
+  grid-template-columns: repeat(3, 352px);
+  grid-template-rows: repeat(3, 204px);
+  gap: 32px;
+}
+
+.vacancyBlockCard {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+
+  transition: box-shadow 0.2s;
+}
+
+.vacancyBlockCard:hover {
+  box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.08);
+}

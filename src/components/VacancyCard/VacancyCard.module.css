@@ -1,0 +1,48 @@
+.title {
+  margin-bottom: 4px;
+  width: 240px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #202020;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.salary {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #202020;
+}
+
+.card p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #202020;
+}
+
+.company {
+  margin-bottom: 8px;
+}
+.city {
+  margin-bottom: 16px;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.iconExperience {
+  width: 12px;
+  height: 12px;
+}

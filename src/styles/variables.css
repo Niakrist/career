@@ -1,0 +1,15 @@
+:root {
+  /* font-weight  */
+  --fontWeightDefault: 500;
+  --fontWeightBold: 700;
+
+  /* font-family  */
+  --fontFamilyDefault: "Montserrat", sans-serif;
+
+  /* colors */
+  --colorDefault: #202020;
+  --colorAccent: #5c89ce;
+  --colorNavLink: #c5c5c5;
+
+  /* font-size */
+}
