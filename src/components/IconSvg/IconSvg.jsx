@@ -1,4 +1,3 @@
-import React from "react";
 import sprite from "./sprite.svg";
 
 const IconSvg = ({ id, className }) => {

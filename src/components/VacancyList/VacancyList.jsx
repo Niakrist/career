@@ -1,17 +1,18 @@
-import React from "react";
-import VacancyBlock from "../VacancyBlock/VacancyBlock";
+import { Container, VacancyBlock } from "@/components";
+import { vacancyListData } from "@/mookData";
 import styles from "./VacancyList.module.css";
-const VacancyList = ({ vacancyListData }) => {
+
+const VacancyList = () => {
   return (
     <section className={styles.vacancyList}>
-      <div className={styles.container}>
+      <Container>
         {vacancyListData.map((vacancyBlockData) => (
           <VacancyBlock
             key={vacancyBlockData.date}
             vacancyBlockData={vacancyBlockData}
           />
         ))}
-      </div>
+      </Container>
     </section>
   );
 };

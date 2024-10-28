@@ -1,3 +1,4 @@
+// Функция для отображение данных уровня зарплыты на карточке ваканасии
 const showSalary = (salary) => {
   if (!salary.min && salary.max) {
     return `до ${salary.max.toLocaleString("ru-RU", {

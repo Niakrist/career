@@ -1,11 +1,26 @@
+.card {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--bgAccentColor);
+  box-shadow: var(--boxShadowColor);
+  cursor: pointer;
+
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: var(--boxShadowColorHover);
+}
+
 .title {
   margin-bottom: 4px;
   width: 240px;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #202020;
+  font-weight: var(--fontWeightBold);
+  font-size: var(--textBig);
+  line-height: var(--lineHeightBig);
+  color: var(--colorDefault);
 
   white-space: nowrap;
   overflow: hidden;
@@ -16,17 +31,17 @@
 .salary {
   margin-bottom: 16px;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #202020;
+  font-weight: var(--fontWeightDefault);
+  font-size: var(--textBig);
+  line-height: var(--lineHeightBig);
+  color: var(--colorDefault);
 }
 
 .card p {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33333;
-  color: #202020;
+  font-weight: var(--fontWeightDefault);
+  font-size: var(--texSmall);
+  line-height: var(--lineHeightDefault);
+  color: var(--colorDefault);
 }
 
 .company {
@@ -45,4 +60,32 @@
 .iconExperience {
   width: 12px;
   height: 12px;
+}
+
+.button {
+  position: absolute;
+  top: 34px;
+  right: 32px;
+
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  opacity: 0;
+
+  transition: 0.2s ease;
+}
+
+.card:hover .button {
+  opacity: 1;
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1279px) {
+  .title {
+    width: 181px;
+  }
 }

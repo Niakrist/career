@@ -1,14 +1,14 @@
-import React from "react";
+import { Container } from "@/components";
 import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <Container>
         Проект выполнен в рамках стажировки{" "}
         <a href="https://preax.ru/" target="_blank">
           PREAX
         </a>
-      </div>
+      </Container>
     </footer>
   );
 };

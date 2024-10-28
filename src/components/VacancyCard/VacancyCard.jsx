@@ -1,7 +1,7 @@
-import React from "react";
-import { showSalary, showExperience } from "../../utils";
-import IconSvg from "../IconSvg/IconSvg";
+import { IconSvg } from "@/components";
+import { showSalary, showExperience } from "@/utils";
 import styles from "./VacancyCard.module.css";
+
 const VacancyCard = ({ vacancyCardData }) => {
   const salary = showSalary(vacancyCardData.salary);
   const experience = showExperience(vacancyCardData.experience);
@@ -16,6 +16,9 @@ const VacancyCard = ({ vacancyCardData }) => {
         <IconSvg id="experience-svg" className={styles.iconExperience} />
         <p>{experience}</p>
       </div>
+      <button className={styles.button}>
+        <IconSvg id="eye-slash-solid-svg" className={styles.buttonIcon} />
+      </button>
     </article>
   );
 };

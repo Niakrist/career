@@ -1,16 +1,13 @@
 .footer {
+  min-width: 1120px;
+
   padding: 32px 0;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #747474;
+  font-size: var(--texMedium);
+  line-height: var(--lineHeightSmall);
+  color: var(--colorGray);
 
-  background-color: #f6f6f6;
-}
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
+  background-color: var(--bgColor);
 }
 
 .footer a {

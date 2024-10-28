@@ -1,15 +1,18 @@
 .header {
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
-  background: #f9f9f9;
+  min-width: 1120px;
+
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  box-shadow: var(--boxShadowColor);
+  background-color: var(--bgAccentColor);
   padding: 24px 0;
 }
 
-.container {
+.headerWrapper {
   display: flex;
   align-items: center;
-  gap: 220px;
-  max-width: 1120px;
-  margin: 0 auto;
+  gap: 328px;
 }
 
 .logoLink {
@@ -29,20 +32,32 @@
 
 .navLink {
   font-weight: var(--fontWeightBold);
-  font-size: 14px;
-  line-height: 1.42857;
+  font-size: var(--texMedium);
+  line-height: var(--lineHeightNav);
   color: var(--colorNavLink);
   transition: color 0.2s;
 }
 
 .navLink:hover {
-  color: #8caee0;
+  color: var(--colorNavLinkHover);
 }
 
 .navLink.active {
   color: var(--colorAccent);
 }
 
-.navLink.active :hover {
-  color: #8caee0;
+.navLink:hover.active {
+  color: var(--colorNavLinkHover);
+}
+
+@media (max-width: 1599px) {
+  .headerWrapper {
+    gap: 220px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .headerWrapper {
+    gap: 130px;
+  }
 }

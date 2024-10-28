@@ -1,12 +1,6 @@
 .filter {
-  background-color: #f6f6f6;
-  /* background-color: #f6c6f6; */
+  background-color: var(--bgColor);
   padding: 48px 0 32px;
-}
-
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
 }
 
 .filterlist {

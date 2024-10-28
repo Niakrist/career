@@ -1,5 +1,4 @@
-import React from "react";
-import VacancyCard from "../VacancyCard/VacancyCard";
+import { VacancyCard } from "@/components";
 import styles from "./VacancyBlock.module.css";
 
 const VacancyBlock = ({ vacancyBlockData }) => {
@@ -8,7 +7,7 @@ const VacancyBlock = ({ vacancyBlockData }) => {
       <h2 className={styles.title}>{vacancyBlockData.date}</h2>
       <ul className={styles.vacancyBlockList}>
         {vacancyBlockData.listOfVacancies.map((vacancyCardData) => (
-          <li key={vacancyCardData.id} className={styles.vacancyBlockCard}>
+          <li key={vacancyCardData.id}>
             <a href="/">
               <VacancyCard vacancyCardData={vacancyCardData} />
             </a>

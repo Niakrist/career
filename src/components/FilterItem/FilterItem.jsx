@@ -1,5 +1,4 @@
-import React from "react";
-import IconSvg from "../IconSvg/IconSvg";
+import { IconSvg } from "@/components";
 import styles from "./FilterItem.module.css";
 
 const FilterItem = ({ filter }) => {
