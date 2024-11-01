@@ -1,0 +1,49 @@
+.headContainer {
+  background-color: #F9F9F9;
+  position: sticky;
+  top: 0;
+}
+
+.header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.menu {
+  display: flex;
+  gap: 72px;
+  padding-right: 33%;
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 16px;
+  color: #C5C5C5;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btnActive {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 16px;
+  color: #5C89CE;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn:hover, .btnActive:hover {
+  color: #8CAEE0;
+}

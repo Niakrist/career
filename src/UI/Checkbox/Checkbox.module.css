@@ -1,0 +1,39 @@
+.itemLabel {
+  padding: 8px 24px;
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #202020;
+  cursor: pointer;
+}
+
+.inputCheckbox {
+  display: none;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  color: #c5c5c5;
+  transition: color 0.2s;
+}
+
+.itemLabel:hover .checkbox {
+  color: #8caee0;
+}
+
+.checkbox path {
+  opacity: 0;
+}
+
+.checkboxActive {
+  color: #5c89ce;
+}
+.checkboxActive path {
+  opacity: 1;
+  color: #5c89ce;
+}

@@ -1,8 +1,2 @@
-# CareerApp
-
-## Task 1 andrei, andrei_58685
-
-# Rsbuild Project
-
-npm install
-npm run dev
+Task 1: Дима, dimrux
+Task 2: andrei, andrei_58685
