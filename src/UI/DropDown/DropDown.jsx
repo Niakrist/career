@@ -3,6 +3,7 @@ import styles from "./DropDown.module.css";
 
 import Icon from "../../components/Icon/Icon";
 import Checkbox from "../checkbox/Checkbox";
+import DropDownItem from "../DropDownItem/DropDownItem";
 
 const DropDown = ({ filter, onHandle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,8 @@ const DropDown = ({ filter, onHandle }) => {
     if (filter.groups) {
       const data2 = filter.groups.map((elem) => {
         return {
-          type: filter.type,
-          name: elem.name,
+          type: elem.type,
+          name: filter.name,
           title: elem.title,
           options: elem.options,
         };
@@ -25,7 +26,7 @@ const DropDown = ({ filter, onHandle }) => {
   return (
     <>
       <button className={styles.filterItem} onClick={() => setIsOpen(!isOpen)}>
-        <Icon name={filter.name} className={styles.icons} />
+        <Icon name={filter.type} className={styles.icons} />
         {filter.title}
         <Icon
           name="chevronDown"
@@ -35,23 +36,31 @@ const DropDown = ({ filter, onHandle }) => {
         />
       </button>
       {isOpen && (
-        <ul className={styles.list}>
-          {filter.options
-            ? filter.options.map((data) => (
+        <div className={styles.wrapper}>
+          <ul className={styles.list}>
+            {filter.options ? (
+              filter.options.map((data) => (
                 <li className={styles.item} key={data.name}>
                   <Checkbox
                     data={data}
-                    type={filter.name}
+                    type={filter.type}
                     onHandle={onHandle}
                   />
                 </li>
               ))
-            : data2.map((data, index) => (
-                <li className={styles.item} key={index}>
-                  <DropDown filter={data} onHandle={onHandle} />
-                </li>
-              ))}
-        </ul>
+            ) : (
+              <ul className={styles.list}>
+                {data2.map((data, index) => {
+                  return (
+                    <li key={index}>
+                      <DropDownItem filter={data} onHandle={onHandle} />
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </ul>
+        </div>
       )}
     </>
   );

@@ -1,17 +1,13 @@
 import styles from "./item.module.css";
-import Arrow from "../icons/Arrow";
-import Briefcase from "../icons/Briefcase";
 import Geo from "../icons/Geo";
-import Filter from "../icons/Filter";
 import Close from "../icons/Close";
 import { useState } from "react";
-import Checkbox from "../../ui/checkbox/Checkbox";
 import DropDown from "../../UI/DropDown/DropDown";
 
 const FilterItem = ({ filter, onHandle }) => {
   const [city, setCity] = useState("");
 
-  switch (filter?.type) {
+  switch (filter?.name) {
     case "input":
       return (
         <label

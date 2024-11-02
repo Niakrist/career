@@ -8,11 +8,9 @@ const FilterList = () => {
   const [filters, setFilter] = useState(filterListData);
 
   const handleFilter = (name, type) => {
-    console.log("type: ", type);
-    console.log("name: ", name);
     setFilter((prevData) => {
       return prevData.map((item) => {
-        if (item.name === type) {
+        if (item.type === type) {
           return {
             ...item,
             options: item.options.map((elem) => {
@@ -21,6 +19,24 @@ const FilterList = () => {
               } else {
                 return elem;
               }
+            }),
+          };
+        } else if (item.groups) {
+          return {
+            ...item,
+            groups: item.groups.map((group) => {
+              return group.type === type
+                ? {
+                    ...group,
+                    options: group.options.map((elem) => {
+                      if (elem.name === name) {
+                        return { ...elem, isChecked: !elem.isChecked };
+                      } else {
+                        return elem;
+                      }
+                    }),
+                  }
+                : group;
             }),
           };
         } else {
@@ -33,7 +49,7 @@ const FilterList = () => {
   return (
     <nav className={styles.nav}>
       {filters.map((filter) => (
-        <FilterItem key={filter.name} filter={filter} onHandle={handleFilter} />
+        <FilterItem key={filter.type} filter={filter} onHandle={handleFilter} />
       ))}
     </nav>
   );

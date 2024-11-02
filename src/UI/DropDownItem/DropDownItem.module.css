@@ -38,29 +38,30 @@
   transform: rotate(90deg);
 }
 
-.wrapper {
-  position: absolute;
+@media (max-width: 1279px) {
+  .filterItem {
+    width: 293px;
+  }
 }
 
 .list {
+  left: 0;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
-  width: 100%;
   background: #f9f9f9;
+  width: 100%;
 }
 
 .item {
   display: block;
 }
 
+.item:first-child {
+  padding-top: 8px;
+}
+
 .item:not(:last-child) {
   padding-bottom: 4px;
 }
 .item:last-child {
-  padding-bottom: 8px;
-}
-
-@media (max-width: 1279px) {
-  .filterItem {
-    width: 293px;
-  }
+  padding-bottom: 16px;
 }
