@@ -31,9 +31,9 @@ const DropDownItem = ({ filter, onHandle }) => {
                 <Checkbox data={data} type={filter.type} onHandle={onHandle} />
               ) : (
                 <RadioButton
-                  value={value}
-                  setValue={setValue}
+                  value={filter.radioValue}
                   data={data}
+                  onHandle={onHandle}
                   type={filter.type}
                 />
               )}

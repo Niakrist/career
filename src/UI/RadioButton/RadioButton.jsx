@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Radio from "../../components/Icon/icons/Radio";
 import styles from "./RadioButton.module.css";
 
-const RadioButton = ({ data, value, setValue, type, onHandle }) => {
+const RadioButton = ({ data, value, type, onHandle }) => {
   return (
     <label className={styles.itemLabel} htmlFor={data.name}>
       <Radio
@@ -15,7 +15,7 @@ const RadioButton = ({ data, value, setValue, type, onHandle }) => {
         name={data.type}
         type="radio"
         checked={data.name === value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => onHandle(e.target.value, type, "radio")}
       />
       {data.label}
     </label>

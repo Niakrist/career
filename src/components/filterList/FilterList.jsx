@@ -8,6 +8,29 @@ const FilterList = () => {
   const [filters, setFilter] = useState(filterListData);
 
   const handleFilter = (name, type, tag) => {
+    if (tag === "radio") {
+      setFilter((prevData) => {
+        return prevData.map((item) => {
+          if (item.groups) {
+            return {
+              ...item,
+              groups: item.groups.map((elem) => {
+                if (elem.type === type) {
+                  return {
+                    ...elem,
+                    radioValue: name,
+                  };
+                } else {
+                  return elem;
+                }
+              }),
+            };
+          } else {
+            return item;
+          }
+        });
+      });
+    }
     if (tag === "checkbox") {
       setFilter((prevData) => {
         return prevData.map((item) => {
