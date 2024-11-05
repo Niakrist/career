@@ -15,10 +15,18 @@
   border-radius: 16px 16px 16px 16px;
   transition: background-color 0.2s;
   overflow: hidden;
+  transition: color 0.2s;
+}
+
+.filterItemActive {
+  color: #202020;
+  background-color: #ebf1fa;
+  border-radius: 16px 16px 0px 0px;
 }
 
 .filterItem:hover {
   background-color: #ebf1fa;
+  color: #202020;
 }
 
 .icons {
@@ -40,6 +48,25 @@
 
 .wrapper {
   position: absolute;
+  width: 100%;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
+  background: #f9f9f9;
+  max-height: 612px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #5c89ce;
+  border-radius: 7px;
 }
 
 .list {

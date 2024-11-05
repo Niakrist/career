@@ -15,10 +15,15 @@
   border-radius: 16px 16px 16px 16px;
   transition: background-color 0.2s;
   overflow: hidden;
+  transition: color 0.2s;
 }
 
 .filterItem:hover {
-  background-color: #ebf1fa;
+  color: #202020;
+}
+
+.filterItem:hover .chevronDown {
+  color: #202020;
 }
 
 .icons {
@@ -27,15 +32,22 @@
   z-index: 2;
 }
 
+.filterItemActive {
+  color: #202020;
+}
+
 .chevronDown {
   width: 12px;
   height: 12px;
   margin-left: auto;
   transition: transform 0.2s;
+  color: #747474;
+  transition: color 0.2s;
 }
 
 .chevronDownRotate {
   transform: rotate(90deg);
+  color: #202020;
 }
 
 @media (max-width: 1279px) {

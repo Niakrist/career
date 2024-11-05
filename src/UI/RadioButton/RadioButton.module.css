@@ -15,6 +15,41 @@
   display: none;
 }
 
+.radio {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #c5c5c5;
+  border-radius: 50%;
+  position: relative;
+  font-size: 0;
+  transition: border 0.2s;
+}
+
+.itemLabel:hover .radio {
+  border: 2px solid #8caee0;
+}
+
+.radioActive {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5c89ce;
+  border-radius: 50%;
+  position: relative;
+  font-size: 0;
+  transition: border 0.2s;
+}
+
+.radioActive div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #5c89ce;
+  border-radius: 50%;
+  font-size: 0;
+}
 .checkbox {
   width: 16px;
   height: 16px;
@@ -32,6 +67,8 @@
 }
 
 .checkboxActive {
+  width: 16px;
+  height: 16px;
   color: #5c89ce;
   transition: color 0.2s;
 }

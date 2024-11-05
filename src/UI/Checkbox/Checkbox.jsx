@@ -14,7 +14,7 @@ const Checkbox = ({ data, type, onHandle }) => {
         name={data.name}
         type="checkbox"
         checked={data.isChecked}
-        onChange={() => onHandle(data.name, type)}
+        onChange={() => onHandle(data.name, type, "checkbox")}
       />
       {data.label}
     </label>

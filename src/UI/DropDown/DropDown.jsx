@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./DropDown.module.css";
-
 import Icon from "../../components/Icon/Icon";
 import Checkbox from "../checkbox/Checkbox";
 import DropDownItem from "../DropDownItem/DropDownItem";
@@ -16,6 +15,7 @@ const DropDown = ({ filter, onHandle }) => {
           name: filter.name,
           title: elem.title,
           options: elem.options,
+          radioValue: elem.radioValue,
         };
       });
       return data2;
@@ -25,7 +25,9 @@ const DropDown = ({ filter, onHandle }) => {
 
   return (
     <>
-      <button className={styles.filterItem} onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className={`${styles.filterItem} ${isOpen && styles.filterItemActive}`}
+        onClick={() => setIsOpen(!isOpen)}>
         <Icon name={filter.type} className={styles.icons} />
         {filter.title}
         <Icon

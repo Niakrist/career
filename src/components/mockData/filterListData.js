@@ -24,6 +24,7 @@ export const filterListData = [
       {
         type: "calendar",
         title: "Дата публикации вакансии",
+        radioValue: "",
         options: [
           {
             name: "all-time",
@@ -45,6 +46,7 @@ export const filterListData = [
       {
         type: "experience",
         title: "Опыт работы",
+        radioValue: "",
         options: [
           {
             name: "no",
@@ -120,7 +122,7 @@ export const filterListData = [
             isChecked: false,
             type: "checkbox",
           },
-          { name: "CSS3", label: "CSS3", isChecked: false, type: "checkbox" },
+          { name: "React", label: "React", isChecked: false, type: "checkbox" },
           { name: "Git", label: "Git", isChecked: false, type: "checkbox" },
           { name: "Vue", label: "Vue", isChecked: false, type: "checkbox" },
           {
@@ -130,6 +132,19 @@ export const filterListData = [
             type: "checkbox",
           },
           { name: "HTML5", label: "HTML5", isChecked: false, type: "checkbox" },
+          { name: "CSS3", label: "CSS3", isChecked: false, type: "checkbox" },
+          {
+            name: "VSCode",
+            label: "VS Code",
+            isChecked: false,
+            type: "checkbox",
+          },
+          {
+            name: "gitlab",
+            label: "GitLab",
+            isChecked: false,
+            type: "checkbox",
+          },
         ],
       },
       {
@@ -159,6 +174,7 @@ export const filterListData = [
       {
         type: "salary",
         title: "Уровень дохода",
+        radioValue: "",
         options: [
           {
             name: "no",

@@ -15,12 +15,12 @@ const Check = ({ className }) => {
         width="14.5"
         height="14.5"
         rx="3.25"
-        stroke="#5C89CE"
+        stroke="currentColor"
         strokeWidth="1.5"
       />
       <path
         d="M10.6668 6L7.00016 10L5.3335 8.18182"
-        stroke="#5C89CE"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
