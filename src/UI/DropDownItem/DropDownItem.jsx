@@ -7,7 +7,6 @@ import RadioButton from "../RadioButton/RadioButton";
 
 const DropDownItem = ({ filter, onHandle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState("");
 
   return (
     <>

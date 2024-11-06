@@ -9,7 +9,7 @@ const DropDown = ({ filter, onHandle }) => {
 
   const generateDrop = () => {
     if (filter.groups) {
-      const data2 = filter.groups.map((elem) => {
+      const data = filter.groups.map((elem) => {
         return {
           type: elem.type,
           name: filter.name,
@@ -18,10 +18,10 @@ const DropDown = ({ filter, onHandle }) => {
           radioValue: elem.radioValue,
         };
       });
-      return data2;
+      return data;
     }
   };
-  const data2 = generateDrop();
+  const data = generateDrop();
 
   return (
     <>
@@ -51,15 +51,15 @@ const DropDown = ({ filter, onHandle }) => {
                 </li>
               ))
             ) : (
-              <ul className={styles.list}>
-                {data2.map((data, index) => {
+              <>
+                {data.map((data, index) => {
                   return (
                     <li key={index}>
                       <DropDownItem filter={data} onHandle={onHandle} />
                     </li>
                   );
                 })}
-              </ul>
+              </>
             )}
           </ul>
         </div>

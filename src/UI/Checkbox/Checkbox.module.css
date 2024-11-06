@@ -1,4 +1,4 @@
-.itemLabel {
+.checkboxLabel {
   padding: 8px 24px;
   display: flex;
   column-gap: 16px;
@@ -22,7 +22,7 @@
   transition: color 0.2s;
 }
 
-.itemLabel:hover .checkbox {
+.checkboxLabel:hover .checkbox {
   color: #8caee0;
 }
 
@@ -32,6 +32,8 @@
 }
 
 .checkboxActive {
+  width: 16px;
+  height: 16px;
   color: #5c89ce;
   transition: color 0.2s;
 }
@@ -41,7 +43,7 @@
   transition: color 0.2s;
 }
 
-.itemLabel:hover .checkboxActive,
-.itemLabel:hover .checkboxActive path {
+.checkboxLabel:hover .checkboxActive,
+.checkboxLabel:hover .checkboxActive path {
   color: #8caee0;
 }

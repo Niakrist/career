@@ -1,4 +1,4 @@
-.itemLabel {
+.radioLabel {
   padding: 8px 24px;
   display: flex;
   column-gap: 16px;
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.inputCheckbox {
+.inputRadio {
   display: none;
 }
 
@@ -25,13 +25,14 @@
   transition: border 0.2s;
 }
 
-.itemLabel:hover .radio {
+.radioLabel:hover .radio {
   border: 2px solid #8caee0;
 }
 
 .radioActive {
   width: 16px;
   height: 16px;
+  background-color: transparent;
   border: 2px solid #5c89ce;
   border-radius: 50%;
   position: relative;
@@ -49,36 +50,13 @@
   background-color: #5c89ce;
   border-radius: 50%;
   font-size: 0;
-}
-.checkbox {
-  width: 16px;
-  height: 16px;
-  color: #c5c5c5;
-  transition: color 0.2s;
+  transition: background-color 0.2s;
 }
 
-.itemLabel:hover .checkbox {
-  color: #8caee0;
+.radioLabel:hover .radioActive {
+  border: 2px solid #8caee0;
 }
 
-.checkbox path {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.checkboxActive {
-  width: 16px;
-  height: 16px;
-  color: #5c89ce;
-  transition: color 0.2s;
-}
-.checkboxActive path {
-  opacity: 1;
-  color: #5c89ce;
-  transition: color 0.2s;
-}
-
-.itemLabel:hover .checkboxActive,
-.itemLabel:hover .checkboxActive path {
-  color: #8caee0;
+.radioLabel:hover .radioActive div {
+  background-color: #8caee0;
 }

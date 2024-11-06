@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 16px;
+  min-width: 1024px;
+  background-color: #f6f6f6;
+  color: #202020;
+}
+
+button {
+  background-color: transparent;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}

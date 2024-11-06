@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import Radio from "../../components/Icon/icons/Radio";
+import Icon from "../../components/Icon/Icon";
 import styles from "./RadioButton.module.css";
 
 const RadioButton = ({ data, value, type, onHandle }) => {
   return (
-    <label className={styles.itemLabel} htmlFor={data.name}>
-      <Radio
+    <label className={styles.radioLabel} htmlFor={data.name}>
+      <Icon
+        name="radio"
         className={data.name === value ? styles.radioActive : styles.radio}
       />
       <input
-        className={styles.inputCheckbox}
+        className={styles.inputRadio}
         id={data.name}
         value={data.name}
         name={data.type}

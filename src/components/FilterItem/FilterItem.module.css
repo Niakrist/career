@@ -1,0 +1,85 @@
+.filterItem {
+  width: 352px;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #747474;
+
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 16px 16px 16px 16px;
+  transition: background-color 0.2s;
+  overflow: hidden;
+}
+
+.filterItemActive {
+  background-color: #ebf1fa;
+}
+
+.filterItem:hover {
+  background-color: #ebf1fa;
+}
+
+.icons {
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+
+.input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #202020;
+}
+
+.input:focus {
+  background-color: #ebf1fa;
+  outline: 150px solid #ebf1fa;
+  z-index: 1;
+}
+
+.input::placeholder {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #747474;
+}
+
+.clean {
+  margin-left: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.cleanIcon {
+  min-width: 12px;
+  min-height: 12px;
+  color: #747474;
+  transition: color 0.2s;
+}
+
+.cleanIcon:hover {
+  color: #5c89ce;
+}
+
+.filter {
+  position: relative;
+}
+
+@media (max-width: 1279px) {
+  .filterItem {
+    width: 293px;
+  }
+}

@@ -9,13 +9,19 @@
   font-size: 12px;
   line-height: 1.33333;
   color: #747474;
-
-  background-color: #f9f9f9;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
-  border-radius: 16px 16px 16px 16px;
-  transition: background-color 0.2s;
   overflow: hidden;
   transition: color 0.2s;
+  position: relative;
+}
+
+.filterItem::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 1px;
+  background-color: rgba(116, 116, 116, 0.05);
 }
 
 .filterItem:hover {
@@ -50,16 +56,10 @@
   color: #202020;
 }
 
-@media (max-width: 1279px) {
-  .filterItem {
-    width: 293px;
-  }
-}
-
 .list {
   left: 0;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   width: 100%;
 }
 
@@ -76,4 +76,10 @@
 }
 .item:last-child {
   padding-bottom: 16px;
+}
+
+@media (max-width: 1279px) {
+  .filterItem {
+    width: 293px;
+  }
 }
