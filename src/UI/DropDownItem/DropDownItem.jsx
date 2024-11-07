@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Icon } from "@/components";
+import { Checkbox, RadioButton } from "@/UI";
+import { clsx } from "@/utils";
+import { ICON_NAME, TYPE_NAME } from "@/constants";
 import styles from "./DropDownItem.module.css";
-
-import Icon from "../../components/Icon/Icon";
-import Checkbox from "../checkbox/Checkbox";
-import RadioButton from "../RadioButton/RadioButton";
 
 const DropDownItem = ({ filter, onHandle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,22 +11,23 @@ const DropDownItem = ({ filter, onHandle }) => {
   return (
     <>
       <button
-        className={`${styles.filterItem} ${isOpen && styles.filterItemActive}`}
+        className={clsx(styles.filterItem, isOpen && styles.filterItemActive)}
         onClick={() => setIsOpen(!isOpen)}>
         <Icon name={filter.type} className={styles.icons} />
         {filter.title}
         <Icon
-          name="chevronDown"
-          className={`${styles.chevronDown} ${
+          name={ICON_NAME.CHEVRONDOWN}
+          className={clsx(
+            styles.chevronDown,
             isOpen && styles.chevronDownRotate
-          }`}
+          )}
         />
       </button>
       {isOpen && (
         <ul className={styles.list}>
           {filter.options.map((data) => (
             <li className={styles.item} key={data.name}>
-              {data.type === "checkbox" ? (
+              {data.type === TYPE_NAME.CHECKBOX ? (
                 <Checkbox data={data} type={filter.type} onHandle={onHandle} />
               ) : (
                 <RadioButton

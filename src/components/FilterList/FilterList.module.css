@@ -1,6 +1,6 @@
 .nav {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(293px, 352px));
   gap: 32px;
   padding: 48px 0 32px 0;
   position: relative;

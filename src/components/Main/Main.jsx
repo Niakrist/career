@@ -1,5 +1,4 @@
-import FilterList from "../FilterList/FilterList";
-import VacancyList from "../VacancyList/VacancyList";
+import { FilterList, VacancyList } from "@/components";
 
 const Main = () => {
   return (

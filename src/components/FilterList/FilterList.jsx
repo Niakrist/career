@@ -1,112 +1,64 @@
-import styles from "./FilterList.module.css";
-import { filterListData } from "./../../mockData/filterListData";
 import { useState } from "react";
-import FilterItem from "../FilterItem/FilterItem";
+import { filterListData } from "@/mockData";
+import { FilterItem } from "@/components";
+import { TYPE_NAME } from "@/constants";
+import {
+  changeRadio,
+  checkedCheckbox,
+  resetCheckbox,
+  getValueCity,
+} from "@/utils";
+import { useClearButton } from "@/hooks";
+import styles from "./FilterList.module.css";
 
 const FilterList = () => {
   const [filters, setFilter] = useState(filterListData);
+  const isClearButton = useClearButton(filters);
 
   const handleFilter = (name, type, tag) => {
-    if (tag === "radio") {
-      setFilter((prevData) => {
-        return prevData.map((item) => {
-          if (item.groups) {
-            return {
-              ...item,
-              groups: item.groups.map((elem) => {
-                if (elem.type === type) {
-                  return {
-                    ...elem,
-                    radioValue: name,
-                  };
-                } else {
-                  return elem;
-                }
-              }),
-            };
-          } else {
-            return item;
-          }
-        });
-      });
-
-      if (name === "no-matter") {
-        setFilter((prevData) => {
-          return prevData.map((item) => {
-            if (item.groups) {
-              return {
-                ...item,
-                groups: item.groups.map((elem) => {
-                  if (elem.type === type) {
-                    return {
-                      ...elem,
-                      options: elem.options.map((el) => {
-                        if (el.name === "isSalary") {
-                          console.log(el);
-                          return { ...el, isChecked: false };
-                        } else {
-                          return el;
-                        }
-                      }),
-                    };
-                  } else {
-                    return elem;
-                  }
-                }),
-              };
-            } else {
-              return item;
-            }
-          });
-        });
-      }
+    if (tag === TYPE_NAME.RADIO) {
+      changeRadio(setFilter, name, type);
     }
-    if (tag === "checkbox") {
-      setFilter((prevData) => {
-        return prevData.map((item) => {
-          if (item.type === type) {
-            return {
-              ...item,
-              options: item.options.map((elem) => {
-                if (elem.name === name) {
-                  return { ...elem, isChecked: !elem.isChecked };
-                } else {
-                  return elem;
-                }
-              }),
-            };
-          } else if (item.groups) {
-            return {
-              ...item,
-              groups: item.groups.map((group) => {
-                return group.type === type
-                  ? {
-                      ...group,
-                      options: group.options.map((elem) => {
-                        if (elem.name === name) {
-                          return { ...elem, isChecked: !elem.isChecked };
-                        } else {
-                          return elem;
-                        }
-                      }),
-                    }
-                  : group;
-              }),
-            };
-          } else {
-            return item;
-          }
-        });
-      });
+    if (name === TYPE_NAME.NO_MATTER) {
+      resetCheckbox(setFilter, type);
+    }
+    if (tag === TYPE_NAME.CHECKBOX) {
+      checkedCheckbox(setFilter, name, type);
     }
   };
+
+  const handleCity = (value) => {
+    setFilter((prevState) => {
+      return prevState.map((item) => {
+        if (item.type === TYPE_NAME.LOCATION) {
+          return { ...item, city: value };
+        } else {
+          return item;
+        }
+      });
+    });
+  };
+
+  const city = getValueCity(filters);
 
   return (
     <nav className={styles.nav}>
       {filters.map((filter) => (
-        <FilterItem key={filter.type} filter={filter} onHandle={handleFilter} />
+        <FilterItem
+          key={filter.type}
+          filter={filter}
+          onCity={handleCity}
+          city={city}
+          onHandle={handleFilter}
+        />
       ))}
-      <button className={styles.resetFilter}>Сбросить все фильтры</button>
+      {isClearButton && (
+        <button
+          className={styles.resetFilter}
+          onClick={() => setFilter(filterListData)}>
+          Сбросить все фильтры
+        </button>
+      )}
     </nav>
   );
 };

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Icon from "../../components/Icon/Icon";
+import { Icon } from "@/components";
+import { ICON_NAME, TYPE_NAME } from "@/constants";
 import styles from "./Checkbox.module.css";
 
 const Checkbox = ({ data, type, onHandle }) => {
   return (
     <label className={styles.checkboxLabel} htmlFor={data.name}>
       <Icon
-        name="check"
+        name={ICON_NAME.CHECK}
         className={data.isChecked ? styles.checkboxActive : styles.checkbox}
       />
 
@@ -16,7 +16,7 @@ const Checkbox = ({ data, type, onHandle }) => {
         name={data.name}
         type="checkbox"
         checked={data.isChecked}
-        onChange={() => onHandle(data.name, type, "checkbox")}
+        onChange={() => onHandle(data.name, type, TYPE_NAME.CHECKBOX)}
       />
       {data.label}
     </label>

@@ -1,5 +1,6 @@
+import { Icon } from "@/components";
+import { ICON_NAME } from "@/constants";
 import styles from "./VacancyCard.module.css";
-import Icon from "../Icon/Icon";
 
 const VacancyCard = ({ title, cash, company, city, exp }) => {
   return (
@@ -7,7 +8,7 @@ const VacancyCard = ({ title, cash, company, city, exp }) => {
       <div className={styles.infoCard}>
         <div className={styles.cardHeader}>
           <h4 className={styles.title}>{title}</h4>
-          <Icon name="hidden" className={styles.svg} />
+          <Icon name={ICON_NAME.HIDDEN_VACANCY} className={styles.svg} />
         </div>
         <p className={styles.cash}>{cash}</p>
       </div>
@@ -16,7 +17,7 @@ const VacancyCard = ({ title, cash, company, city, exp }) => {
         <p>{city}</p>
       </div>
       <div className={styles.expWrapper}>
-        <Icon name="experience" className={styles.experience} />
+        <Icon name={ICON_NAME.EXPERIENCE} className={styles.experience} />
         <p>{exp}</p>
       </div>
     </li>

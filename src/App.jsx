@@ -1,12 +1,10 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Main from "./components/Main/Main";
-
+import { Header, Main, Footer } from "@/components";
+import styles from "./App.module.css";
 const App = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className={styles.container}>
         <Main />
         <Footer />
       </div>

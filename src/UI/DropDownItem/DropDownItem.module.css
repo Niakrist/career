@@ -1,5 +1,5 @@
 .filterItem {
-  width: 352px;
+  width: 100%;
   padding: 16px 24px;
 
   display: flex;
@@ -19,9 +19,9 @@
   position: absolute;
   left: 24px;
   right: 24px;
-  bottom: 0;
+  top: 0;
   height: 1px;
-  background-color: rgba(116, 116, 116, 0.05);
+  background-color: rgba(116, 116, 116, 0.04);
 }
 
 .filterItem:hover {
@@ -46,9 +46,7 @@
   width: 12px;
   height: 12px;
   margin-left: auto;
-  transition: transform 0.2s;
-  color: #747474;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .chevronDownRotate {
@@ -58,7 +56,6 @@
 
 .list {
   left: 0;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.03);
   background-color: #f9f9f9;
   width: 100%;
 }
@@ -76,10 +73,4 @@
 }
 .item:last-child {
   padding-bottom: 16px;
-}
-
-@media (max-width: 1279px) {
-  .filterItem {
-    width: 293px;
-  }
 }

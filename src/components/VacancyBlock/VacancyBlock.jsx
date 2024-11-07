@@ -1,6 +1,6 @@
-import VacancyCard from "../VacancyCard/VacancyCard";
+import { VacancyCard } from "@/components";
+import { vacancyBlockData } from "@/mockData";
 import styles from "./VacancyBlock.module.css";
-import { vacancyBlockData } from "../../mockData/vacancyBlockData";
 const VacancyBlock = () => {
   return (
     <>

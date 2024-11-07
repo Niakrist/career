@@ -1,9 +1,10 @@
 // Данные для полей секции фильтр
-export const filterListData = [
+const filterListData = [
   {
     name: "input",
     type: "location",
     title: "Город",
+    city: "",
   },
   {
     name: "dropDown",
@@ -145,6 +146,18 @@ export const filterListData = [
             isChecked: false,
             type: "checkbox",
           },
+          {
+            name: "github",
+            label: "GitHub",
+            isChecked: false,
+            type: "checkbox",
+          },
+          {
+            name: "TypeScript",
+            label: "TypeScript",
+            isChecked: false,
+            type: "checkbox",
+          },
         ],
       },
       {
@@ -283,3 +296,5 @@ export const filterListData = [
     ],
   },
 ];
+
+export default filterListData;

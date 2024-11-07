@@ -1,4 +1,4 @@
-export const vacancyBlockData = [
+const vacancyBlockData = [
   {
     title: "Junior Frontend-разработчик",
     cash: "от 30 000 Р",
@@ -84,3 +84,5 @@ export const vacancyBlockData = [
     exp: "Опыт от 1 года до 3 лет",
   },
 ];
+
+export default vacancyBlockData;

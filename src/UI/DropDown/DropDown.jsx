@@ -1,40 +1,27 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Icon } from "@/components";
+import { Checkbox, DropDownItem } from "@/UI";
+import { clsx, transformDataForDropdown } from "@/utils";
+import { ICON_NAME } from "@/constants";
 import styles from "./DropDown.module.css";
-import Icon from "../../components/Icon/Icon";
-import Checkbox from "../checkbox/Checkbox";
-import DropDownItem from "../DropDownItem/DropDownItem";
 
 const DropDown = ({ filter, onHandle }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const generateDrop = () => {
-    if (filter.groups) {
-      const data = filter.groups.map((elem) => {
-        return {
-          type: elem.type,
-          name: filter.name,
-          title: elem.title,
-          options: elem.options,
-          radioValue: elem.radioValue,
-        };
-      });
-      return data;
-    }
-  };
-  const data = generateDrop();
+  const data = transformDataForDropdown(filter);
 
   return (
     <>
       <button
-        className={`${styles.filterItem} ${isOpen && styles.filterItemActive}`}
+        className={clsx(styles.filterItem, isOpen && styles.filterItemActive)}
         onClick={() => setIsOpen(!isOpen)}>
         <Icon name={filter.type} className={styles.icons} />
         {filter.title}
         <Icon
-          name="chevronDown"
-          className={`${styles.chevronDown} ${
+          name={ICON_NAME.CHEVRONDOWN}
+          className={clsx(
+            styles.chevronDown,
             isOpen && styles.chevronDownRotate
-          }`}
+          )}
         />
       </button>
       {isOpen && (
