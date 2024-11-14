@@ -1,0 +1,25 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(293px, 352px));
+  gap: 32px;
+  padding: 48px 0 32px 0;
+  position: relative;
+}
+
+.resetFilter {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+
+  font-weight: 700;
+  font-size: 12px;
+
+  line-height: 1.33333;
+  text-align: center;
+  color: #5c89ce;
+  transition: color 0.2s;
+}
+
+.resetFilter:hover {
+  color: #8caee0;
+}

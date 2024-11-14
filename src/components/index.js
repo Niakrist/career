@@ -1,12 +1,12 @@
-import FilterItem from "@/components/FilterItem/FilterItem";
-import FilterList from "@/components/FilterList/FilterList";
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import Icon from "@/components/Icon/Icon";
-import Main from "@/components/Main/Main";
-import VacancyBlock from "@/components/VacancyBlock/VacancyBlock";
-import VacancyCard from "@/components/VacancyCard/VacancyCard";
-import VacancyList from "@/components/VacancyList/VacancyList";
+import FilterItem from "@/components/filterItem/FilterItem";
+import FilterList from "@/components/filterList/FilterList";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+import Icon from "@/components/icon/Icon";
+import Main from "@/components/main/Main";
+import VacancyBlock from "@/components/vacancyBlock/VacancyBlock";
+import VacancyCard from "@/components/vacancyCard/VacancyCard";
+import VacancyList from "@/components/vacancyList/VacancyList";
 
 export {
   FilterItem,

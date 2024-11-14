@@ -1,6 +1,6 @@
 .filterItem {
   width: 100%;
-  padding: 16px 24px;
+  padding: 16px 20px 16px 24px;
 
   display: flex;
   align-items: center;
@@ -21,7 +21,13 @@
   right: 24px;
   top: 0;
   height: 1px;
-  background-color: rgba(116, 116, 116, 0.04);
+  background: linear-gradient(
+    to right,
+    rgba(116, 116, 116, 0) 0%,
+    rgba(116, 116, 116, 0.08) 15%,
+    rgba(116, 116, 116, 0.08) 85%,
+    rgba(116, 116, 116, 0) 100%
+  );
 }
 
 .filterItem:hover {
@@ -71,6 +77,11 @@
 .item:not(:last-child) {
   padding-bottom: 4px;
 }
+
 .item:last-child {
   padding-bottom: 16px;
+}
+
+.itemMix:last-child {
+  margin-top: 12px;
 }

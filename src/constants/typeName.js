@@ -6,6 +6,7 @@ const TYPE_NAME = {
   CHECKBOX: "checkbox",
   IS_SALARY: "isSalary",
   LOCATION: "location",
+  SALARY: "salary",
 };
 
 export default TYPE_NAME;

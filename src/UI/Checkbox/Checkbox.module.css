@@ -9,6 +9,7 @@
   line-height: 1.33333;
   color: #202020;
   cursor: pointer;
+  user-select: none;
 }
 
 .inputCheckbox {

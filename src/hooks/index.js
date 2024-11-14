@@ -1,2 +1,3 @@
 import useClearButton from "@/hooks/useClearButton";
-export { useClearButton };
+import useClickOutside from "@/hooks/useClearButton";
+export { useClearButton, useClickOutside };

@@ -1,7 +1,8 @@
 .headContainer {
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 .header {
@@ -18,6 +19,11 @@
   height: 72px;
 }
 
+.logo {
+  width: 170px;
+  height: 24px;
+}
+
 .menu {
   display: flex;
   gap: 72px;
@@ -25,25 +31,25 @@
 }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 16px;
-  color: #C5C5C5;
+  color: #c5c5c5;
   font-size: 14px;
   line-height: 20px;
+  transition: color 0.2s;
 }
 
 .btnActive {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 16px;
-  color: #5C89CE;
+  color: #5c89ce;
   font-size: 14px;
   line-height: 20px;
 }
 
-.btn:hover, .btnActive:hover {
-  color: #8CAEE0;
+.btn:hover,
+.btnActive:hover {
+  color: #8caee0;
 }

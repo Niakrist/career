@@ -1,5 +1,5 @@
 const clsx = (...classNames) => {
-  return classNames.filter((className) => className).join(" ");
+  return classNames.filter(Boolean).join(" ");
 };
 
 export default clsx;

@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { Icon } from "@/components";
 import { Checkbox, DropDownItem } from "@/UI";
 import { clsx, transformDataForDropdown } from "@/utils";
 import { ICON_NAME } from "@/constants";
 import styles from "./DropDown.module.css";
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 const DropDown = ({ filter, onHandle }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const data = transformDataForDropdown(filter);
+  const listRef = useRef(null);
+
+  const { isOpen, setIsOpen } = useClickOutside(listRef);
 
   return (
-    <>
+    <div ref={listRef}>
       <button
         className={clsx(styles.filterItem, isOpen && styles.filterItemActive)}
         onClick={() => setIsOpen(!isOpen)}>
@@ -51,7 +54,7 @@ const DropDown = ({ filter, onHandle }) => {
           </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

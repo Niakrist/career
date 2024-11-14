@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Icon } from "@/components";
 import { Checkbox, RadioButton } from "@/UI";
 import { clsx } from "@/utils";
@@ -26,7 +26,12 @@ const DropDownItem = ({ filter, onHandle }) => {
       {isOpen && (
         <ul className={styles.list}>
           {filter.options.map((data) => (
-            <li className={styles.item} key={data.name}>
+            <li
+              className={clsx(
+                styles.item,
+                filter.type === TYPE_NAME.SALARY ? styles.itemMix : ""
+              )}
+              key={data.name}>
               {data.type === TYPE_NAME.CHECKBOX ? (
                 <Checkbox data={data} type={filter.type} onHandle={onHandle} />
               ) : (

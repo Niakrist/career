@@ -26,7 +26,6 @@
 
 .filterItem:hover {
   background-color: #ebf1fa;
-  /* color: #202020; */
 }
 
 .icons {
@@ -55,7 +54,7 @@
   max-height: 612px;
   overflow: scroll;
   overflow-x: hidden;
-  z-index: 5;
+  z-index: 3;
 }
 
 .wrapper::-webkit-scrollbar {
